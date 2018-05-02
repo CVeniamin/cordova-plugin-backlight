@@ -31,7 +31,7 @@ public class Backlight extends CordovaPlugin {
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     this.on = this.isOn();
 
-    Log.d(TAG, "is backlight on? " + this.on);
+    //Log.d(TAG, "is backlight on? " + this.on);
   }
 
   @Override
@@ -99,7 +99,7 @@ public class Backlight extends CordovaPlugin {
     }
     catch (Exception e) {
       e.printStackTrace();
-      Log.e(TAG, e.getMessage());
+      //Log.e(TAG, e.getMessage());
     }
     finally {
       try {
@@ -121,12 +121,12 @@ public class Backlight extends CordovaPlugin {
       os.flush();
       os.close();
       if (aByte == '0') {
-        Log.d(TAG, "Backlight on");
+        //Log.d(TAG, "Backlight on");
         on = true;
       }
       else {
         on = false;
-        Log.d(TAG, "Backlight off");
+        //Log.d(TAG, "Backlight off");
       }
       if (callbackContext != null) {
         callbackContext.success();
